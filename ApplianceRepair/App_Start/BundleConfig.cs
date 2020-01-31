@@ -24,6 +24,7 @@ namespace ApplianceRepair
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
+                       "~/Content/bootswatch/united/bootstrap.min.css",
                       "~/Content/site.css"));
         }
     }
