@@ -178,6 +178,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MyMessagesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -185,10 +186,19 @@
     <Compile Include="Migrations\202001310341425_InitialModel.Designer.cs">
       <DependentUpon>202001310341425_InitialModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202002011237108_AddedMyMessage.cs" />
+    <Compile Include="Migrations\202002011237108_AddedMyMessage.Designer.cs">
+      <DependentUpon>202002011237108_AddedMyMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002011329111_AddedDataAnnotaions.cs" />
+    <Compile Include="Migrations\202002011329111_AddedDataAnnotaions.Designer.cs">
+      <DependentUpon>202002011329111_AddedDataAnnotaions.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\MyMessage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -466,6 +476,7 @@
     <Content Include="Views\Shared\_Footer.cshtml" />
     <Content Include="Views\Home\Blog.cshtml" />
     <Content Include="Views\Home\Services.cshtml" />
+    <Content Include="Views\MyMessages\SendMessageForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -478,6 +489,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202001310341425_InitialModel.resx">
       <DependentUpon>202001310341425_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002011237108_AddedMyMessage.resx">
+      <DependentUpon>202002011237108_AddedMyMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002011329111_AddedDataAnnotaions.resx">
+      <DependentUpon>202002011329111_AddedDataAnnotaions.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
