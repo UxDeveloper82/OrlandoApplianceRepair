@@ -1,0 +1,136 @@
+﻿
+@{
+    ViewBag.Title = "Blog";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="container">
+    <div class="row">
+        <!-- Blog Entries Column -->
+        <div class="col-md-8">
+            <h1 class="card-my-4 mt-5">
+                Best Appliances Repair & install
+                <br><small>Blogs for  @DateTime.Now.Year</small>
+            </h1>
+            <hr />
+
+            <!-- Blog Post -->
+            <div class="card card-4 mt-5">
+                <div class="thumbnail">
+                    <h2 class="card-title">Washer Repair</h2>
+                    <img style="width:100%" class="img-responsive" src="~/Content/images/washer-repair1.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">How to diagnose a Washer</p>
+                        <a href="#" class="btn btn-primary">Read More &rarr;</a>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <i class="fa fa-pencil"></i> Posted on January 1 by
+                        <a href="#">Martin Fernandez</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="card card-4 mt-5">
+                <div class="thumbnail">
+                    <h2 class="card-title">Refrigator Repair</h2>
+                    <img style="width:100%" class="img-responsive" src="~/Content/images/blog1.jpeg" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">How to replace Water-filter-housing</p>
+                        <a href="#" class="btn btn-primary">Read More &rarr;</a>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <i class="fa fa-pencil"></i> Posted on January 22 by
+                        <a href="#">Martin Fernandez</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="card card-4 mt-5">
+                <div class="thumbnail">
+                    <h2 class="card-title">Icemaker Replacement</h2>
+                    <img style="width:100%" class="img-responsive" src="~/Content/images/blog2.jpeg" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">How to diagnose a Icemaker</p>
+                        <a href="#" class="btn btn-primary">Read More &rarr;</a>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <i class="fa fa-pencil"></i> Posted on January 23 by
+                        <a href="#">Martin Fernandez</a>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Pagination -->
+            <div class="mt-5">
+                <pagination-controls (pageChange)="p = $event"></pagination-controls>
+            </div>
+        </div>
+
+        <!-- Sidebar Widgets Column -->
+        <div class="col-md-4">
+            <!-- Search Widget -->
+            <div class="card my-4">
+                <h5 class="card-header">Search</h5>
+                <div class="card-body">
+                    <div class="input-group">
+                        <input type="text" class="form-control" [(ngModel)]="searchText" placeholder="Search for...">
+                        <span class="input-group-btn">
+                            <button class="btn btn-secondary" type="button">Go!</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Categories Widget -->
+            <div class="card my-4">
+                <h5 class="card-header">Categories</h5>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <ul class="list-unstyled mb-0">
+                                <li>
+                                    <a href="#">Appliances Repair</a>
+                                </li>
+                                <li>
+                                    <a href="#">Refrigators Repair</a>
+                                </li>
+                                <li>
+                                    <a href="#">Appliances Install</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-6">
+                            <ul class="list-unstyled mb-0">
+                                <li>
+                                    <a href="#">Electronics Repair</a>
+                                </li>
+                                <li>
+                                    <a href="#">Dryer Maintaines</a>
+                                </li>
+                                <li>
+                                    <a href="#">Washer</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Side Widget -->
+            <div class="card my-4">
+                <h5 class="card-header">We are a local, long established appliance repair company</h5>
+                <div class="card-body">
+                    Our team makes the difference by offering  you
+                    old fashioned, high quality, customer care. Call or email us to experience the "Reliable Difference".
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->

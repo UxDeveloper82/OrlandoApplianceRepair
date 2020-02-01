@@ -20,9 +20,16 @@ namespace ApplianceRepair.Controllers
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Services()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "My Services.";
+
+            return View();
+        }
+
+        public ActionResult Blog()
+        {
+            ViewBag.Message = "My Blog.";
 
             return View();
         }
