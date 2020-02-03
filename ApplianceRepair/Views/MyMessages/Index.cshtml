@@ -1,0 +1,39 @@
+﻿@model IEnumerable<ApplianceRepair.Models.MyMessage>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>My Messages</h2>
+@if (!Model.Any())
+{
+   <p>We dont have any Messages yet.</p>
+}
+else {
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Messages</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var mymessage in Model)
+            {
+               <tr>
+                   <td>@mymessage.Name</td>
+                   <td>@mymessage.Email</td>
+                   <td>@mymessage.Message</td>
+               </tr>
+
+            }
+        </tbody>
+    </table>  
+  
+
+
+
+}
+
+

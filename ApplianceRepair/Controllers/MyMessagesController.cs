@@ -1,4 +1,5 @@
 ﻿using ApplianceRepair.Models;
+using ApplianceRepair.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,18 +21,30 @@ namespace ApplianceRepair.Controllers
         {
             _context.Dispose();
         }
+
         // GET: MyMessages
+        [Authorize]
         public ActionResult Index()
         {
             var mymessages = _context.MyMessages.ToList();
             return View(mymessages);
         }
 
-        public ActionResult SendMessageForm()
+        public ActionResult New()
         {
+            var viewModel = new MyMessagesViewModel();
 
-            return View();
+            return View(viewModel);
         }
+        [HttpPost]
+        public ActionResult Create(MyMessage mymessage)
+        {
+            _context.MyMessages.Add(mymessage);
+            _context.SaveChanges();
+            return RedirectToAction("Index","Home");
+        }
+
+
 
     }
 }
