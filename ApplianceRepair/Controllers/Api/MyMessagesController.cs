@@ -35,16 +35,16 @@ namespace ApplianceRepair.Controllers.Api
             return Ok(mymessage);
         }
 
-        //POST /api/customers
+        //POST /api/MyMessages
         [HttpPost]
         public IHttpActionResult CreateMessage(MyMessage mymessage)
         {
             if (!ModelState.IsValid)
-                throw new HttpResponseException(HttpStatusCode.BadRequest);
+                return BadRequest();
 
             _context.MyMessages.Add(mymessage);
             _context.SaveChanges();
-            return Ok(mymessage);
+            return Created(new Uri(Request.RequestUri + "/" + mymessage.Id), mymessage);
 
         }
 
