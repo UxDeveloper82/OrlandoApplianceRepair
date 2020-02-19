@@ -1,0 +1,25 @@
+﻿@model ApplianceRepair.Models.MyBlog
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h2>@Model.Title</h2>
+            <hr />
+            <img style="width:100%" class="img-responsive" src="~/Content/images/@Model.ImgUrl" alt="Card image cap">
+            <div class="card-body">
+                <h2 class="card-title">@Model.SomeDetails</h2>
+                <p class="card-text">@Model.MoreDetails</p>
+                <a href="/MyBlogs" class="btn btn-primary">&larr; Go Back </a>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>

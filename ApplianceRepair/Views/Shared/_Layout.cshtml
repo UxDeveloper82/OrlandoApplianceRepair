@@ -22,7 +22,7 @@
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">@Html.ActionLink("About", "About", "Home", new { area = "" }, new { @class = "nav-link" })</li>
                     <li class="nav-item">@Html.ActionLink("My-Services", "Services", "Home", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li class="nav-item">@Html.ActionLink("Blog", "blog", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li class="nav-item">@Html.ActionLink("My-Blog", "Index", "MyBlogs", new { area = "" }, new { @class = "nav-link" })</li>
                     <li class="nav-item">@Html.ActionLink("Send Message", "New", "MyMessages", new { area = "" }, new { @class = "nav-link" })</li>
                 </ul>
                 @Html.Partial("_LoginPartial")

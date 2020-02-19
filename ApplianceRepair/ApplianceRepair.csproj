@@ -186,9 +186,11 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\Api\MyBlogsController.cs" />
     <Compile Include="Controllers\Api\MyMessagesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MyBlogsController.cs" />
     <Compile Include="Controllers\MyMessagesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -205,10 +207,15 @@
     <Compile Include="Migrations\202002011329111_AddedDataAnnotaions.Designer.cs">
       <DependentUpon>202002011329111_AddedDataAnnotaions.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202002170347424_AddMyBlogClass.cs" />
+    <Compile Include="Migrations\202002170347424_AddMyBlogClass.Designer.cs">
+      <DependentUpon>202002170347424_AddMyBlogClass.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\MyBlog.cs" />
     <Compile Include="Models\MyMessage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -593,7 +600,7 @@
     <Content Include="Content\images\subzero.jpg" />
     <Content Include="Content\images\wall-oven.jpg" />
     <Content Include="Content\images\washer-dryer.jpg" />
-    <Content Include="Content\images\washer-repair1.jpg" />
+    <Content Include="Content\images\blog3.jpg" />
     <Content Include="css\font-awesome.css" />
     <Content Include="css\font-awesome.min.css" />
     <Content Include="favicon.ico" />
@@ -1054,10 +1061,11 @@
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Shared\_Footer.cshtml" />
-    <Content Include="Views\Home\Blog.cshtml" />
     <Content Include="Views\Home\Services.cshtml" />
     <Content Include="Views\MyMessages\New.cshtml" />
     <Content Include="Views\MyMessages\Index.cshtml" />
+    <Content Include="Views\MyBlogs\Index.cshtml" />
+    <Content Include="Views\MyBlogs\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1076,6 +1084,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202002011329111_AddedDataAnnotaions.resx">
       <DependentUpon>202002011329111_AddedDataAnnotaions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002170347424_AddMyBlogClass.resx">
+      <DependentUpon>202002170347424_AddMyBlogClass.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

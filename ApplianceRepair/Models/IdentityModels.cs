@@ -21,6 +21,7 @@ namespace ApplianceRepair.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public DbSet<MyMessage> MyMessages { get; set; }
+        public DbSet<MyBlog> MyBlogs { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {

@@ -27,11 +27,5 @@ namespace ApplianceRepair.Controllers
             return View();
         }
 
-        public ActionResult Blog()
-        {
-            ViewBag.Message = "My Blog.";
-
-            return View();
-        }
     }
 }
