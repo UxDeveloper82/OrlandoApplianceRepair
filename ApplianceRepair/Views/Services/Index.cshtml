@@ -1,0 +1,29 @@
+﻿@model IEnumerable<ApplianceRepair.Models.Service>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Services</h2>
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Repair Type</th>
+            <th>Repair Price</th>
+            <th>Repair Days</th>
+            <th>Repair Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var service in Model)
+        {
+            <tr>
+                <td>@service.Type</td>
+                <td>@service.Price</td>
+                <td>@service.GetDays</td>
+                <td>@service.Description</td>
+            </tr>
+        }
+    </tbody>
+</table>

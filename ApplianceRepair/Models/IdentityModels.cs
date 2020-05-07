@@ -22,6 +22,7 @@ namespace ApplianceRepair.Models
     {
         public DbSet<MyMessage> MyMessages { get; set; }
         public DbSet<MyBlog> MyBlogs { get; set; }
+        public DbSet<Service> Services { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {

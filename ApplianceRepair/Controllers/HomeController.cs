@@ -27,5 +27,12 @@ namespace ApplianceRepair.Controllers
             return View();
         }
 
+        public ActionResult ControlPanel()
+        {
+            ViewBag.Message = "Control Panels.";
+
+            return View();
+        }
+
     }
 }
